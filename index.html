@@ -1,37 +1,38 @@
-<div id="splash-screen">
-  <img src="images/logo.png" alt="NotaFlex Logo" class="splash-logo" />
-</div>
-
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<div id="welcome-message" class="hidden"></div>
-  
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NotaFlex</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Firebase -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>
 </head>
-<body class="light">
+<body class="classic">
+  <!-- 🌠 Tela de abertura -->
+  <div id="splash-screen">
+    <img src="images/logo.png" alt="NotaFlex Logo" class="splash-logo" />
+  </div>
+
   <header>
     <div class="logo-container">
       <img id="logo" src="images/logo.png" alt="Logotipo da Empresa" />
       <h1>NotaFlex</h1>
     </div>
     <select id="theme-selector">
-      <option value="light">Claro</option>
-      <option value="dark">Escuro</option>
-      <option value="colorful">Colorido</option>
+      <option value="classic">Corporativo</option>
+      <option value="vibrant">Vibrante</option>
+      <option value="minimal">Minimalista</option>
     </select>
   </header>
 
+  <!-- 👋 Boas-vindas ao usuário -->
+  <div id="welcome-message" class="hidden"></div>
+
   <main>
+    <!-- 👤 Login -->
     <section class="login-section">
       <h2>Login</h2>
       <form id="login-form">
@@ -41,6 +42,7 @@
       </form>
     </section>
 
+    <!-- 📝 Área do aplicativo -->
     <section id="nota-section" class="hidden">
       <form id="nota-form">
         <input type="date" id="data" required />
